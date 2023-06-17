@@ -34,11 +34,11 @@ function requestAccess() {
     .catch(console.error);
   button.remove();
   scaleUpButton = createButton("+");
-  scaleUpButton.class("scale_up_button")
-  //scaleUpButton.style("font-size", "24px");
-  //scaleUpButton.position(13, 100);
-  //scaleUpButton.style("width", "30px");
-  //scaleUpButton.style("transform", "rotate(90deg)");
+  //scaleUpButton.class("scale_up_button")
+  scaleUpButton.style("font-size", "24px");
+  scaleUpButton.position(13, 100);
+  scaleUpButton.style("width", "30px");
+  scaleUpButton.style("transform", "rotate(90deg)");
   scaleUpButton.mousePressed(() => {
     scaleFactor = scaleFactor * 1.2;
   });
