@@ -36,7 +36,7 @@ function requestAccess() {
   scaleUpButton = createButton("+");
   scaleUpButton.style("font-size", "24px");
   scaleUpButton.position(13, 100);
-  scaleUpButton.style("width", "30px");
+
   scaleUpButton.style("transform", "rotate(90deg)");
   scaleUpButton.style("text-align", "center");
   scaleUpButton.mousePressed(() => {
@@ -48,7 +48,7 @@ function requestAccess() {
   scaleDownButton.position(13, 30);
   scaleDownButton.style("padding", "0px");
   scaleDownButton.style("margin", "0px");
-  scaleDownButton.style("width", "50px");
+
   scaleDownButton.style("transform", "rotate(90deg)");
   scaleDownButton.mousePressed(() => {
     scaleFactor = scaleFactor / 1.2;
