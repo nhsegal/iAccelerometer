@@ -2,7 +2,7 @@ let button;
 let mode = 1;
 let modeButton;
 let permissionGranted = false;
-let scaleFactor = 8;
+let scaleFactor = 16;
 let scaleUpButton;
 let scaleDownButton;
 
