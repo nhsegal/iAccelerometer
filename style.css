@@ -5,9 +5,3 @@ html, body {
 canvas {
   display: block;
 }
-.scale_up_button {
-  font-size: "48px";
-  position: 13, 100;
-  width: "30px";
-  transform: "rotate(90deg)";
-}
