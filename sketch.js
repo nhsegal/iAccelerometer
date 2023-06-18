@@ -21,6 +21,7 @@ function setup() {
   } else {
     background(0, 250, 0);
   }
+  frameRate(20)
 }
 
 function requestAccess() {
@@ -94,6 +95,7 @@ function drawCrosshairs() {
 }
 
 function drawBar(y) {
+
   push();
   translate(width / 2, height / 2);
   noStroke();
