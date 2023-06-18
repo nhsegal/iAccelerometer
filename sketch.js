@@ -107,8 +107,8 @@ function drawBar(y) {
   rect(-50, 0, 100, scaleFactor * y);
   strokeWeight(6);
   stroke(255);
-  for (let i = -8; i < 9; i++) {
-    line(-width,  scaleFactor * i, width,  scaleFactor * i);
+  for (let i = -80; i < 90; i++) {
+    line(-width,  2*scaleFactor * i, width, 2*scaleFactor * i);
   }
 
   pop();
