@@ -106,7 +106,7 @@ function drawBar(y) {
   strokeWeight(6);
   stroke(255);
   for (let i = -8; i < 9; i++) {
-    line(-width, 5 * scaleFactor * i, width, 5 * scaleFactor * i);
+    line(-width,  scaleFactor * i, width,  scaleFactor * i);
   }
 
   pop();
@@ -142,12 +142,8 @@ function draw() {
     return;
   }
   background(255);
-  let pAccX = pAccelerationX;
-  let pAccY = pAccelerationY;
-  let accX = accelerationX;
-  let accY = accelerationY;
-  let x = (accX + pAccX) / 2;
-  let y = (accY + pAccY) / 2;
+  let x = (accelerationX + pAccelerationX);
+  let y = (accelerationY + pAccelerationY);
   drawCrosshairs();
   if (mode > 0) {
     drawCircles();
