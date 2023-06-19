@@ -1,5 +1,5 @@
 let button;
-let mode = 1;
+let mode = -1;
 let modeButton;
 let permissionGranted = false;
 let scaleFactor = 16;
@@ -8,20 +8,26 @@ let scaleDownButton;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
   if (
     typeof DeviceOrientationEvent !== "undefined" &&
     typeof DeviceOrientationEvent.requestPermission === "function" &&
     typeof DeviceMotionEvent.requestPermission === "function"
   ) {
-    background(250, 0, 0);
     button = createButton("click to grant access to sensors");
     button.style("font-size", "24px");
     button.center();
     button.mousePressed(requestAccess);
   } else {
-    background(0, 250, 0);
+    background(0)    
   }
+
+  button = createButton("click to grant access to sensors");
+  button.style("font-size", "24px");
+  button.center();
+  button.mousePressed(requestAccess);
   frameRate(20)
+
 }
 
 function requestAccess() {
@@ -37,7 +43,6 @@ function requestAccess() {
   scaleUpButton = createButton("+");
   scaleUpButton.style("font-size", "24px");
   scaleUpButton.position(13, 105);
-
   scaleUpButton.style("transform", "rotate(90deg)");
   scaleUpButton.style("text-align", "center");
   scaleUpButton.mousePressed(() => {
@@ -49,7 +54,6 @@ function requestAccess() {
   scaleDownButton.position(13, 35);
   scaleDownButton.style("padding", "0px");
   scaleDownButton.style("margin", "0px");
-
   scaleDownButton.style("transform", "rotate(90deg)");
   scaleDownButton.mousePressed(() => {
     scaleFactor = scaleFactor / 1.2;
@@ -94,23 +98,23 @@ function drawCrosshairs() {
   line(0, height / 2, width, height / 2);
 }
 
-function drawBar(y) {
 
+function drawBar(y) {
   push();
   translate(width / 2, height / 2);
   noStroke();
+  let boxNumber = round(y)
   if (y > 0) {
     fill(250, 0, 0);
+    for (let i = 0; i < abs(boxNumber); i++) {
+      rect(-60, i*scaleFactor+0.1*scaleFactor, 120, scaleFactor*.8);
+    }
   } else {
     fill(0, 235, 0);
+    for (let i = 0; i < abs(boxNumber); i++) {
+      rect(-60, Math.sign(y)*(i+1)*scaleFactor+0.1*scaleFactor, 120, scaleFactor*.8);
+    }
   }
-  rect(-50, 0, 100, scaleFactor * y);
-  strokeWeight(6);
-  stroke(255);
-  for (let i = -80; i < 90; i++) {
-    line(-width,  2*scaleFactor * i, width, 2*scaleFactor * i);
-  }
-
   pop();
 }
 
