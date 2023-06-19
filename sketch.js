@@ -13,7 +13,7 @@ function setup() {
     typeof DeviceOrientationEvent.requestPermission === "function" &&
     typeof DeviceMotionEvent.requestPermission === "function"
   ) {
-    button = createButton("click to grant access to sensors");
+    button = createButton("Click to grant access to sensors");
     button.style("font-size", "24px");
     button.center();
     button.mousePressed(requestAccess);
