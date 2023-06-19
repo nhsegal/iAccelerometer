@@ -8,7 +8,6 @@ let scaleDownButton;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
   if (
     typeof DeviceOrientationEvent !== "undefined" &&
     typeof DeviceOrientationEvent.requestPermission === "function" &&
@@ -20,11 +19,9 @@ function setup() {
     button.mousePressed(requestAccess);
       frameRate(20)
   } else {
-    background(0)    
+    background(250); 
+    text('ABCD', 50, 30);
   }
-
-
-
 }
 
 function requestAccess() {
