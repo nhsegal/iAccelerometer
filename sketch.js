@@ -14,7 +14,7 @@ function setup() {
     typeof DeviceMotionEvent.requestPermission === "function"
   ) {
     button = createButton("Click to grant access to sensors");
-    button.style("font-size", "24px");
+    button.style("font-size", "48px");
     button.center();
     button.mousePressed(requestAccess);
     
@@ -35,7 +35,7 @@ function requestAccess() {
     .catch(console.error);
   button.remove();
   scaleUpButton = createButton("+");
-  scaleUpButton.style("font-size", "24px");
+  scaleUpButton.style("font-size", "48px");
   scaleUpButton.position(13, 105);
   scaleUpButton.style("transform", "rotate(90deg)");
   scaleUpButton.style("text-align", "center");
@@ -44,7 +44,7 @@ function requestAccess() {
   });
 
   scaleDownButton = createButton("-");
-  scaleDownButton.style("font-size", "24px");
+  scaleDownButton.style("font-size", "48px");
   scaleDownButton.position(13, 35);
   scaleDownButton.style("padding", "0px");
   scaleDownButton.style("margin", "0px");
@@ -53,7 +53,7 @@ function requestAccess() {
     scaleFactor = scaleFactor / 1.2;
   });
   modeButton = createButton("Toggle Mode");
-  modeButton.style("font-size", "24px");
+  modeButton.style("font-size", "48px");
   modeButton.style("transform", "rotate(90deg)");
   modeButton.position(-45, height - 120);
   modeButton.mousePressed(changeMode);
