@@ -18,15 +18,12 @@ function setup() {
     button.style("font-size", "24px");
     button.center();
     button.mousePressed(requestAccess);
+      frameRate(20)
   } else {
     background(0)    
   }
 
-  button = createButton("click to grant access to sensors");
-  button.style("font-size", "24px");
-  button.center();
-  button.mousePressed(requestAccess);
-  frameRate(20)
+
 
 }
 
