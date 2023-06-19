@@ -20,7 +20,7 @@ function setup() {
       frameRate(20)
   } else {
     background(250); 
-    text('ABCD', 50, 30);
+    text('Please open this URL on a smartphone or tablet.', 50, 60);
   }
 }
 
@@ -138,7 +138,9 @@ function drawMarks() {
 
 function draw() {
   if (!permissionGranted) {
-    background(0);
+    background(255);
+    textSize(42)
+    text('Please open this URL on a smartphone or tablet.', 50, 60);
     return;
   }
   background(255);
