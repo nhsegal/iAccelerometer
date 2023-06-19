@@ -36,7 +36,7 @@ function requestAccess() {
   button.remove();
   scaleUpButton = createButton("+");
   scaleUpButton.style("font-size", "32px");
-  scaleUpButton.position(12, 175);
+  scaleUpButton.position(12, 115);
   scaleUpButton.style("transform", "rotate(90deg)");
   scaleUpButton.style("text-align", "center");
   scaleUpButton.mousePressed(() => {
@@ -55,7 +55,7 @@ function requestAccess() {
   modeButton = createButton("Toggle Mode");
   modeButton.style("font-size", "32px");
   modeButton.style("transform", "rotate(90deg)");
-  modeButton.position(-75, height - 230);
+  modeButton.position(-70, height - 200);
   modeButton.mousePressed(changeMode);
 }
 
