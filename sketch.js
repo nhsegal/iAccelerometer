@@ -55,7 +55,7 @@ function requestAccess() {
   modeButton = createButton("Toggle Mode");
   modeButton.style("font-size", "48px");
   modeButton.style("transform", "rotate(90deg)");
-  modeButton.position(-55, height - 230);
+  modeButton.position(-75, height - 230);
   modeButton.mousePressed(changeMode);
 }
 
