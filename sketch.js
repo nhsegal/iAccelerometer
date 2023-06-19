@@ -17,7 +17,7 @@ function setup() {
     button.style("font-size", "24px");
     button.center();
     button.mousePressed(requestAccess);
-      frameRate(20)
+    
   } else {
     background(250); 
     text('Please open this URL on a smartphone or tablet.', 50, 60);
@@ -138,9 +138,7 @@ function drawMarks() {
 
 function draw() {
   if (!permissionGranted) {
-    background(255);
-    textSize(42)
-    text('Please open this URL on a smartphone or tablet.', 50, 60);
+   
     return;
   }
   background(255);
