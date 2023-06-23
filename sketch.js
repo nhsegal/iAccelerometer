@@ -5,7 +5,11 @@ let permissionGranted = false;
 let scaleFactor = 16;
 let scaleUpButton;
 let scaleDownButton;
+let img;
 
+function preload(){
+  img = loadImage("images/qrcode.png")
+}
 function setup() {
   createCanvas(windowWidth, windowHeight);
   if (
@@ -20,7 +24,8 @@ function setup() {
     
   } else {
     background(250); 
-    text('Please open this URL on a smartphone or tablet.', 50, 60);
+    text("Please open this page's URL on a smartphone or tablet or scan the QR with your phone's camera.", 50, 60);
+    image(img,50,70, 200, 200);
   }
 }
 
